@@ -247,14 +247,17 @@ let citiesWithId = [
     {user_id: 4, country: 'USA', city: 'Miami'}
 ];
 
+let usersWithCities = [];
+
 for (const user of usersWithId) {
     for (const city of citiesWithId) {
         if (user.id === city.user_id){
-            user.address = city.country + ', ' + city.city;
+            user.address = city;
+            usersWithCities.push(user.id, user.name, user.age, user.status, user.address);
         }
     }
 }
-console.log(usersWithId);
+console.log(usersWithCities);
 
 
 
