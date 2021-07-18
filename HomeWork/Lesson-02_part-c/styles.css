@@ -1,0 +1,22 @@
+h2 {
+  text-transform: uppercase;
+  color: orangered;
+}
+
+.users-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-block {
+  width: 45%;
+  padding: 10px;
+}
+
+.address-block {
+  background: cornflowerblue;
+  font-style: italic;
+  font-weight: bold;
+  padding: 5px;
+}
