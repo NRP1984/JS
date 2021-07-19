@@ -32,7 +32,7 @@
 
 // document.write('<div>');
 
-// for (item of items) {
+// for ( let item of items) {
 //     document.write(`
 //         <div class="item">
 //             <h2>${item}</h2>
@@ -84,7 +84,7 @@
 
 // let items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// for (item of items) {
+// for (let item of items) {
 //     console.log(item)
 // }
 
@@ -93,7 +93,7 @@
 
 // let items = ['html', 'css', 'js', 'react', 'angular', 'python', 'java', 'mongodb', 'node.js', 'mysql'];
 
-// for (item of items) {
+// for (let item of items) {
 //     console.log(item)
 // }
 
@@ -102,7 +102,7 @@
 
 // let items = ['html', 'css', 'js', false, 'angular', 56, true, 'mongodb', 'node.js', 100500];
 
-// for (item of items) {
+// for (let item of items) {
 //     console.log(item)
 // }
 
@@ -111,7 +111,7 @@
 
 // let items = ['html', 'css', 'js', false, 'angular', 56, true, 'mongodb', 'node.js', 100500];
 
-// for (item of items) {
+// for (let item of items) {
 //     if (typeof item === "boolean") {console.log(item)}
 // }
 
@@ -120,7 +120,7 @@
 
 // let items = ['html', 'css', 'js', false, 'angular', 56, true, 'mongodb', 'node.js', 100500];
 
-// for (item of items) {
+// for (let item of items) {
 //     if (typeof item === "number") {console.log(item)}
 // }
 
@@ -129,7 +129,7 @@
 
 // let items = ['html', 'css', 'js', false, 'angular', 56, true, 'mongodb', 'node.js', 100500];
 
-// for (item of items) {
+// for (let item of items) {
 //     if (typeof item === "string") {console.log(item)}
 // }
 
@@ -253,10 +253,11 @@ for (const user of usersWithId) {
     for (const city of citiesWithId) {
         if (user.id === city.user_id){
             user.address = city;
-            usersWithCities.push(user.id, user.name, user.age, user.status, user.address);
+            usersWithCities.push(user);
         }
     }
 }
+
 console.log(usersWithCities);
 
 
