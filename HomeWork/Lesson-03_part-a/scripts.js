@@ -3,36 +3,29 @@
 // function areaRect(a, b) {
 //     return a * b;
 // }
-// let area = areaRect(10, 20);
-// console.log(area);
+// console.log(areaRect(10, 20));
 
 //----------------------------------------------------------------------------------------------------------------------
 
 // - створити функцію яка обчислює та повертає площу кола
 
 // const pi = 3.14;
-//
 // function areaCircle(pi, r) {
 //     return pi * r**2;
 // }
-//
-// let area = areaCircle(pi, 5);
-// console.log(area);
+// console.log(areaCircle(pi, 5));
 
 //----------------------------------------------------------------------------------------------------------------------
 
 // - створити функцію яка обчислює та повертає площу циліндру
 
 // const pi = 3.14;
-//
 // function areaСylinder(pi, r, h) {
 //     let areaSide = 2 * pi * r * h;
 //     let areaBase = pi * r**2;
 //     return areaSide + areaBase;
 // }
-//
-// let areaFull = areaСylinder(pi, 8, 20);
-// console.log(areaFull);
+// console.log(areaСylinder(pi, 8, 20));
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -59,12 +52,19 @@
 
 // - створити функцію яка  створює блок з текстом. Текст задати через аргумент
 
+//ВАРІАНТ №1
+// function createTxt (text) {
+//     document.write(`<p>${text}</p>`)
+// }
+// createTxt('HELLO WORLD!!!');
+
+//ВАРІАНТ №2
 // function createTxt () {
 //     for (let i=0; i < arguments.length; i++) {
 //         document.write(`<p>${arguments[i]}</p>`)
 //     }
 // }
-// createTxt('HELLO WORLD!!!');
+// createTxt('HELLO WORLD!!!', 'HELLO EVERYONE!!!');
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -118,11 +118,11 @@
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
-function arrOfItems () {
-    document.write(`<ul>`);
-    for (let i = 0; i < arguments.length; i++) {
-        document.write(`<li>${arguments[i]}</li>`);
-    }
-    document.write(`</ul>`);
-}
-arrOfItems(1, true, 'HELLO WORLD!!!', false, 100500);
+// function arrOfItems () {
+//     document.write(`<ul>`);
+//     for (let i = 0; i < arguments.length; i++) {
+//         document.write(`<li>${arguments[i]}</li>`);
+//     }
+//     document.write(`</ul>`);
+// }
+// arrOfItems(1, true, 'HELLO WORLD!!!', false, 100500);
