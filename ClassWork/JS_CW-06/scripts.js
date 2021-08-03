@@ -16,7 +16,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             btnDetails.innerText = 'Details'
             btnDetails.onclick = function () {
 
-                fetch(`https://jsonplaceholder.typicode.com/posts/${post.userId}/posts`)
+                fetch(`https://jsonplaceholder.typicode.com/posts/${post.userId}/comments`)
                     .then(value => value.json())
                     .then(value => {
                         let posts = document.getElementById('posts')
