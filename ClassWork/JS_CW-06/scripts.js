@@ -4,33 +4,33 @@
 // зробити кнопку до кожного поста. при кліку на яку виводяться в окремий блок всі коментарі поточного поста
 
 fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(response => response.json())
+    .then(value => value.json())
     .then(posts => {
-        let postsBox = document.getElementById('posts-box')
-
         for (const post of posts) {
-            let title = document.createElement('h2')
-            title.innerText = `${post.id}. ${post.title}`
 
-            let btnDetails = document.createElement('button')
-            btnDetails.innerText = 'Details'
-            btnDetails.onclick = function () {
+            const div = document.createElement('div')
+            document.body.appendChild(div)
+            const {userId, id, title, body} = post
+            div.innerHTML = `<h2>${userId} - ${id} - ${title}</h2><p>${body}</p>`
 
-                fetch(`https://jsonplaceholder.typicode.com/posts/${post.userId}/comments`)
+            const button = document.createElement('button')
+            button.innerText = 'Comments'
+            div.appendChild(button)
+
+            button.onclick = () => {
+
+                fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
                     .then(value => value.json())
-                    .then(value => {
-                        let posts = document.getElementById('posts')
-                        posts.innerHTML = ''
-
-                        for (let post of value) {
-                            let liPost = document.createElement('li')
-                            liPost.innerHTML = `<strong>Post:</strong> ${post.body}`
-                            posts.appendChild(liPost)
+                    .then(comments => {
+                        const divComments = document.createElement('div')
+                        div.appendChild(divComments)
+                        for (const comment of comments) {
+                            const commentItem = document.createElement('div')
+                            commentItem.innerText = `${comment.id} - ${comment.name}`
+                            divComments.appendChild(commentItem)
                         }
                     })
             }
-            title.appendChild(btnDetails)
-            postsBox.appendChild(title)
         }
     })
 
